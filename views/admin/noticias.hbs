@@ -1,0 +1,31 @@
+<div class="container" style="margin:50px auto">
+
+    <div class="row">
+         <div class="contenedor">
+                        <p class="text-right">Hola {{usuario}}!
+            <a href="/admin/login/logout" class="btn btn-sm btn-danger">Cerrar sesion<i class="fa fa-sign-out"></i></a></p>
+
+            <button><a href="/admin/noticias/agregar">Nueva +</a></button>
+            <button><a href="/admin/noticias/test">Test</a></button>
+
+<table style="border: 1px solid black; width:100%" cellspacing="0">
+  <tr style="font-size:20px;">
+    <th style="border: 1px solid black;">#</th>
+    <th style="border: 1px solid black;">Titulo</th>
+    <th style="border: 1px solid black;">Imagen</th>
+    <th style="border: 1px solid black;">Acciones</th>
+  </tr>
+  {{#each noticias}}
+  <tr>
+    <td style="border: 1px solid black;">{{id}}</td>
+    <td style="border: 1px solid black;">{{titulo}}</td>
+    <td style="border: 1px solid black;">{{{imagen}}}</td>
+    <td style="border: 1px solid black;"><a href="/admin/noticias/modificar/{{id}}">Modificar</a> <a href="/admin/noticias/eliminar/{{id}}">Eliminar</a></td>
+  </tr>
+  {{/each}}
+</table>
+    </div>
+</div>
+    <div class="row">
+
+</div>
